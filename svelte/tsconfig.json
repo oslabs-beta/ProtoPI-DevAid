@@ -24,7 +24,7 @@
   },
   "include": [
     "../src/**/*", 
-    "../../../extensions/vscode/webviews/**/*"
+    "../../ProtoPI/webviews/**/*"
   ],
   "exclude": [
     "node_modules",  // Correctly exclude node_modules

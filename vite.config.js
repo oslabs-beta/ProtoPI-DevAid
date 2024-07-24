@@ -4,6 +4,7 @@ import sveltePreprocess from 'svelte-preprocess';
 import tailwindcss from 'tailwindcss';
 import autoprefixer from 'autoprefixer';
 import postcssConfig from './postcss.config.js';  // Ensure correct import for postcss config
+import { visualizer } from 'rollup-plugin-visualizer';
 
 const production = process.env.NODE_ENV === 'production';
 
@@ -32,7 +33,12 @@ export default defineConfig({
     sourcemap: true,
     rollupOptions: {
       input: './index.html',  // Ensure this path is correct and exists
-    },
+      plugins: [
+        visualizer({
+          open: true, // automatically open the report in the browser
+          filename: 'dist/stats.html' // output filename
+        })
+      ]},
     minify: production,
   },
   resolve: {
