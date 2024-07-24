@@ -1,6 +1,6 @@
 <script>
-  import SidebarContainer from '../../../extensions/vscode/webviews/components/Sidebar.svelte';
-  import Workshop from '../../../extensions/vscode/webviews/components/Workshop.svelte';
+  import SidebarContainer from '../../ProtoPI/webviews/components/Sidebar.svelte';
+  import Workshop from '../../ProtoPI/webviews/components/Workshop.svelte';
 </script>
 
 <div class="bg-gray-800 min-h-screen text-white flex items-center justify-center p-5">
